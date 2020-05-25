@@ -33,8 +33,6 @@ class MemoTableViewController: UITableViewController{
         
         if userDefaults.object(forKey: "memos") != nil{
             self.memos = userDefaults.stringArray(forKey: "memos")!
-        }else{
-            memos.append("memo1")
         }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -59,6 +57,7 @@ class MemoTableViewController: UITableViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemoTableViewCell", for: indexPath)
         cell.textLabel!.text = self.memos[indexPath.row]
+        cell.detailTextLabel!.text = "created at"
         
 
         // Configure the cell...
