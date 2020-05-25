@@ -20,12 +20,8 @@ class TodoViewController: UIViewController {
             self.todoTextView.text = todo
             self.navigationItem.title = "Edit Todo"
         }
-        // Do any additional setup after loading the view.
     }
     
-    
-    
-    //メソッド
     func alert(title:String, message:String) {
         alertController = UIAlertController(title: title,message: message,preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK",style: .default,handler: nil))
@@ -37,7 +33,6 @@ class TodoViewController: UIViewController {
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
         guard todoTextView.text != "" else {
-            
             alert(title: "エラー", message: "入力して下さい")
             return false
         }
@@ -51,7 +46,6 @@ class TodoViewController: UIViewController {
         }else{
             self.navigationController?.popViewController(animated: true)
         }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -66,15 +60,4 @@ class TodoViewController: UIViewController {
         }
     }
 }
-
-/*
- // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 
