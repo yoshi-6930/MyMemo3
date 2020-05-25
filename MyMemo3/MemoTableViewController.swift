@@ -48,7 +48,6 @@ class MemoTableViewController: UITableViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemoTableViewCell", for: indexPath)
         cell.textLabel!.text = self.memos[indexPath.row]
-        cell.detailTextLabel!.text = "created at"
 
         return cell
     }

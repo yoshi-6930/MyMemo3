@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		31536831A0F6D2F727CC6B85 /* Pods_MyMemo3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B59A70873F759D2C6A1528 /* Pods_MyMemo3.framework */; };
+		AD50BECE247C08B40080893A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50BECD247C08B40080893A /* Color.swift */; };
 		AD6CDA4B24752F1000F56C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6CDA4A24752F1000F56C6D /* AppDelegate.swift */; };
 		AD6CDA4D24752F1000F56C6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6CDA4C24752F1000F56C6D /* SceneDelegate.swift */; };
 		AD6CDA5224752F1000F56C6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6CDA5024752F1000F56C6D /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		30239171B37B8DB180038F0A /* Pods-MyMemo3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMemo3.debug.xcconfig"; path = "Target Support Files/Pods-MyMemo3/Pods-MyMemo3.debug.xcconfig"; sourceTree = "<group>"; };
 		51B59A70873F759D2C6A1528 /* Pods_MyMemo3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMemo3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD50BECD247C08B40080893A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		AD6CDA4724752F1000F56C6D /* MyMemo3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMemo3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6CDA4A24752F1000F56C6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD6CDA4C24752F1000F56C6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +66,6 @@
 				30239171B37B8DB180038F0A /* Pods-MyMemo3.debug.xcconfig */,
 				FDC197EA61BFE6D5D90BC48A /* Pods-MyMemo3.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -100,6 +101,7 @@
 				AD877AFC247B6A2400487D62 /* TodoTableViewController.swift */,
 				AD877AFE247B6A3F00487D62 /* TodoViewController.swift */,
 				AD877B00247B987F00487D62 /* ShareViewController.swift */,
+				AD50BECD247C08B40080893A /* Color.swift */,
 			);
 			path = MyMemo3;
 			sourceTree = "<group>";
@@ -224,6 +226,7 @@
 				AD877AFD247B6A2400487D62 /* TodoTableViewController.swift in Sources */,
 				AD6CDA4B24752F1000F56C6D /* AppDelegate.swift in Sources */,
 				AD6CDA4D24752F1000F56C6D /* SceneDelegate.swift in Sources */,
+				AD50BECE247C08B40080893A /* Color.swift in Sources */,
 				AD877AFF247B6A3F00487D62 /* TodoViewController.swift in Sources */,
 				AD6CDA5F24752F6000F56C6D /* MemoTableViewController.swift in Sources */,
 			);

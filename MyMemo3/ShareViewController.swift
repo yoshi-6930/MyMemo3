@@ -11,6 +11,8 @@ import SwiftConfettiView
 
 class ShareViewController: UIViewController {
 
+    var changeColor = ChangeColor()
+    var gradientLayer = CAGradientLayer()
     var flag = false
     var confettiView: SwiftConfettiView!
     var screenShotImage = UIImage()
@@ -20,12 +22,20 @@ class ShareViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        changeBackgroundColor()
         setConfetti()
         confettiView.startConfetti()
         if let shareString = self.shareString{
             self.shareTextView.text = shareString
             self.shareTextView.font =  UIFont.boldSystemFont(ofSize: 20)
         }
+    }
+    
+    private func changeBackgroundColor(){
+        gradientLayer = changeColor.changeColor(topR:0.27,topG:0.23,topB:0.46,topAlpha:0.2,
+                                                       bottomR:0.44,bottomG:0.44,bottomB:0.76,bottomAlpha:0.74)
+               gradientLayer.frame = view.bounds
+               view.layer.insertSublayer(gradientLayer, at: 0)
     }
     //紙吹雪の設定
     private func setConfetti(){
@@ -45,8 +55,9 @@ class ShareViewController: UIViewController {
         let items = [screenShotImage] as [Any]
         let activityVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
         //iPadでUIActivityViewControllerを使う時に必要
-        activityVC.popoverPresentationController?.sourceView = self.shareTextView
+        activityVC.popoverPresentationController?.sourceView = self.view
         activityVC.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.size.width / 2.0, y: self.view.bounds.size.height / 2.0, width: 1.0, height: 1.0)
+//        activityVC.isModalInPresentation = true
         present(activityVC, animated: true, completion: nil)
     }
     //紙吹雪のスタート、ストップ

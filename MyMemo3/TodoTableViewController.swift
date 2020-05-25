@@ -45,8 +45,6 @@ class TodoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TodoTableViewCell", for: indexPath)
         cell.textLabel?.text = self.todos[indexPath.row]
-        cell.detailTextLabel!.text = "created at"
-        // Configure the cell...
 
         return cell
     }
