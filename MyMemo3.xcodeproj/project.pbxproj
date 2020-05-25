@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31536831A0F6D2F727CC6B85 /* Pods_MyMemo3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B59A70873F759D2C6A1528 /* Pods_MyMemo3.framework */; };
 		AD6CDA4B24752F1000F56C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6CDA4A24752F1000F56C6D /* AppDelegate.swift */; };
 		AD6CDA4D24752F1000F56C6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6CDA4C24752F1000F56C6D /* SceneDelegate.swift */; };
 		AD6CDA5224752F1000F56C6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6CDA5024752F1000F56C6D /* Main.storyboard */; };
@@ -16,9 +17,12 @@
 		AD6CDA6124752F7800F56C6D /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6CDA6024752F7800F56C6D /* MemoViewController.swift */; };
 		AD877AFD247B6A2400487D62 /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD877AFC247B6A2400487D62 /* TodoTableViewController.swift */; };
 		AD877AFF247B6A3F00487D62 /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD877AFE247B6A3F00487D62 /* TodoViewController.swift */; };
+		AD877B01247B987F00487D62 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD877B00247B987F00487D62 /* ShareViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30239171B37B8DB180038F0A /* Pods-MyMemo3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMemo3.debug.xcconfig"; path = "Target Support Files/Pods-MyMemo3/Pods-MyMemo3.debug.xcconfig"; sourceTree = "<group>"; };
+		51B59A70873F759D2C6A1528 /* Pods_MyMemo3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMemo3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6CDA4724752F1000F56C6D /* MyMemo3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMemo3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6CDA4A24752F1000F56C6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD6CDA4C24752F1000F56C6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +34,8 @@
 		AD6CDA6024752F7800F56C6D /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 		AD877AFC247B6A2400487D62 /* TodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
 		AD877AFE247B6A3F00487D62 /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
+		AD877B00247B987F00487D62 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		FDC197EA61BFE6D5D90BC48A /* Pods-MyMemo3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMemo3.release.xcconfig"; path = "Target Support Files/Pods-MyMemo3/Pods-MyMemo3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31536831A0F6D2F727CC6B85 /* Pods_MyMemo3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BEAFE7ABDB3C887BF4B90A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51B59A70873F759D2C6A1528 /* Pods_MyMemo3.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4DBD28679CD70C56E7226D2B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				30239171B37B8DB180038F0A /* Pods-MyMemo3.debug.xcconfig */,
+				FDC197EA61BFE6D5D90BC48A /* Pods-MyMemo3.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AD6CDA3E24752F1000F56C6D = {
 			isa = PBXGroup;
 			children = (
 				AD6CDA4924752F1000F56C6D /* MyMemo3 */,
 				AD6CDA4824752F1000F56C6D /* Products */,
+				4DBD28679CD70C56E7226D2B /* Pods */,
+				2BEAFE7ABDB3C887BF4B90A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +99,7 @@
 				AD6CDA6024752F7800F56C6D /* MemoViewController.swift */,
 				AD877AFC247B6A2400487D62 /* TodoTableViewController.swift */,
 				AD877AFE247B6A3F00487D62 /* TodoViewController.swift */,
+				AD877B00247B987F00487D62 /* ShareViewController.swift */,
 			);
 			path = MyMemo3;
 			sourceTree = "<group>";
@@ -83,9 +111,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD6CDA5B24752F1200F56C6D /* Build configuration list for PBXNativeTarget "MyMemo3" */;
 			buildPhases = (
+				5E559C0981800DEBBEF7F0E7 /* [CP] Check Pods Manifest.lock */,
 				AD6CDA4324752F1000F56C6D /* Sources */,
 				AD6CDA4424752F1000F56C6D /* Frameworks */,
 				AD6CDA4524752F1000F56C6D /* Resources */,
+				CC07D12A5E771F4AD667335B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,11 +172,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5E559C0981800DEBBEF7F0E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyMemo3-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC07D12A5E771F4AD667335B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyMemo3/Pods-MyMemo3-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyMemo3/Pods-MyMemo3-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyMemo3/Pods-MyMemo3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AD6CDA4324752F1000F56C6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD877B01247B987F00487D62 /* ShareViewController.swift in Sources */,
 				AD6CDA6124752F7800F56C6D /* MemoViewController.swift in Sources */,
 				AD877AFD247B6A2400487D62 /* TodoTableViewController.swift in Sources */,
 				AD6CDA4B24752F1000F56C6D /* AppDelegate.swift in Sources */,
@@ -294,6 +367,7 @@
 		};
 		AD6CDA5C24752F1200F56C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30239171B37B8DB180038F0A /* Pods-MyMemo3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -311,6 +385,7 @@
 		};
 		AD6CDA5D24752F1200F56C6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDC197EA61BFE6D5D90BC48A /* Pods-MyMemo3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

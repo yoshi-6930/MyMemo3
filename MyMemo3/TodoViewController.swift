@@ -59,9 +59,16 @@ class TodoViewController: UIViewController {
         if button == saveButton{
             todo = todoTextView.text ?? ""
         }
+        guard let identifire = segue.identifier else{ return }
+        if identifire == "shareVC"{
+            let shareVC = segue.destination as! ShareViewController
+            shareVC.shareString = self.todoTextView.text
+        }
     }
-    /*
-    // MARK: - Navigation
+}
+
+/*
+ // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -70,4 +77,4 @@ class TodoViewController: UIViewController {
     }
     */
 
-}
+

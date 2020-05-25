@@ -136,7 +136,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gZt-6F-Llt">
-                                <rect key="frame" x="15" y="108" width="384" height="675"/>
+                                <rect key="frame" x="15" y="108" width="384" height="405"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -146,7 +146,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="tyL-mV-CFd" firstAttribute="trailing" secondItem="gZt-6F-Llt" secondAttribute="trailing" constant="15" id="1eL-RE-K3t"/>
-                            <constraint firstItem="tyL-mV-CFd" firstAttribute="bottom" secondItem="gZt-6F-Llt" secondAttribute="bottom" constant="30" id="CWE-u3-pdl"/>
+                            <constraint firstItem="tyL-mV-CFd" firstAttribute="bottom" secondItem="gZt-6F-Llt" secondAttribute="bottom" constant="300" id="CWE-u3-pdl"/>
                             <constraint firstItem="gZt-6F-Llt" firstAttribute="top" secondItem="tyL-mV-CFd" secondAttribute="top" constant="20" id="YsM-o0-dae"/>
                             <constraint firstItem="gZt-6F-Llt" firstAttribute="leading" secondItem="tyL-mV-CFd" secondAttribute="leading" constant="15" id="eeH-cY-aBO"/>
                         </constraints>
@@ -158,11 +158,18 @@
                                 <action selector="cancelTap:" destination="y1B-bh-lrQ" id="j7E-NT-AVe"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="R9j-Dr-hYD">
-                            <connections>
-                                <segue destination="YGe-s8-4uV" kind="unwind" unwindAction="appendToTodoListWithSender:" id="bsv-hs-fdg"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="save" id="R9j-Dr-hYD">
+                                <connections>
+                                    <segue destination="YGe-s8-4uV" kind="unwind" unwindAction="appendToTodoListWithSender:" id="bsv-hs-fdg"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="hxf-AI-uZl">
+                                <connections>
+                                    <segue destination="7Mc-kY-63Y" kind="show" identifier="shareVC" id="GDm-WT-rvS"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="saveButton" destination="R9j-Dr-hYD" id="ePL-yG-GIF"/>
@@ -173,6 +180,61 @@
                 <exit id="YGe-s8-4uV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3670" y="867"/>
+        </scene>
+        <!--Share-->
+        <scene sceneID="xRh-fU-YfC">
+            <objects>
+                <viewController id="7Mc-kY-63Y" customClass="ShareViewController" customModule="MyMemo3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JEd-N9-Ggp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="F41-wb-DF8">
+                                <rect key="frame" x="30" y="191.5" width="354" height="321.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日したこと" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nno-Qn-TTL">
+                                <rect key="frame" x="122" y="128" width="170.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="F41-wb-DF8" firstAttribute="leading" secondItem="GNE-z7-48c" secondAttribute="leading" constant="30" id="1k2-hG-0LV"/>
+                            <constraint firstItem="GNE-z7-48c" firstAttribute="bottom" secondItem="F41-wb-DF8" secondAttribute="bottom" constant="300" id="7BS-kv-Erc"/>
+                            <constraint firstItem="F41-wb-DF8" firstAttribute="top" secondItem="Nno-Qn-TTL" secondAttribute="bottom" constant="30" id="IEI-JG-Aad"/>
+                            <constraint firstItem="Nno-Qn-TTL" firstAttribute="top" secondItem="GNE-z7-48c" secondAttribute="top" constant="40" id="N5j-Ga-Ld2"/>
+                            <constraint firstItem="GNE-z7-48c" firstAttribute="trailing" secondItem="F41-wb-DF8" secondAttribute="trailing" constant="30" id="ma1-tA-ifI"/>
+                            <constraint firstItem="Nno-Qn-TTL" firstAttribute="centerX" secondItem="JEd-N9-Ggp" secondAttribute="centerX" id="u14-cg-yT4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GNE-z7-48c"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Share" id="5WD-yv-YxW">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="action" id="rSh-jA-6BG">
+                                <connections>
+                                    <action selector="shareTap:" destination="7Mc-kY-63Y" id="Eix-Wh-3N1"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="演出ON/OFF" id="eZV-uc-NaQ">
+                                <connections>
+                                    <action selector="animationButton:" destination="7Mc-kY-63Y" id="aSg-Kk-FJB"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="shareTextView" destination="F41-wb-DF8" id="alF-Rv-f2O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Td7-A7-ylf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4588" y="879"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DBQ-Pk-pOX">
